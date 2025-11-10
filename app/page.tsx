@@ -2,15 +2,19 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import DivisionCorousel from "./components/DivisionCorousel";
-import Header from "./components/Header";
+import RootLayout from "./layout";
+
+export const metadata = {
+  title: "Digicraft",
+  description: "Digicraft MAN 1 Nganjuk",
+}; 
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <RootLayout>
       <Landing />
       <DivisionCorousel />
       {/* <Header /> */}
-    </>
+    </RootLayout>
   );
 }
