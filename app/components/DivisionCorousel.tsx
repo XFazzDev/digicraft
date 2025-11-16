@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Header from "./Header";
+import Link from "next/link";
 
 const logo = "https://aqiqohkita.com/logo/images/logo-man-1-nganjuk.jpg";
 
@@ -11,26 +12,31 @@ const divisionsData = [
     name: "Branding",
     icon: logo,
     description: "Bertanggung jawab untuk membangun dan memelihara citra Digicraft, mengelola identitas visual, dan menciptakan materi promosi yang menarik dan kohesif.",
+    url: "/branding"
   },
   {
     name: "Bisnis",
     icon: logo,
     description: "Fokus pada pengembangan model pendapatan, pencarian peluang sponsorship, dan monetisasi proyek digital yang dihasilkan oleh anggota organisasi.",
+    url: "/bisnis"
   },
   {
     name: "PDD",
     icon: logo,
     description: "Divisi inti yang menangani pengembangan website, aplikasi, analisis data, serta memastikan semua infrastruktur dan data digital berjalan lancar dan aman.",
+    url: "/pdd"
   },
   {
     name: "Humas",
     icon: logo,
     description: "Menjembatani komunikasi antara Digicraft dengan pihak internal (sekolah) dan eksternal (media, partner). Mengelola media sosial dan hubungan masyarakat.",
+    url: "/humas"
   },
   {
     name: "KKP",
     icon: logo,
     description: "Divisi kreatif yang berfokus pada produksi konten visual, seperti videografi, desain grafis, dan pembuatan produk digital kreatif lainnya.",
+    url: "/kkp"
   },
 ];
 
@@ -156,7 +162,7 @@ const DivisionCarousel = () => {
                       </div>
                       <h3 className="text-2xl font-bold text-yellow-300 mb-3">{divisi.name}</h3>
                       <p className="text-gray-200 text-base mb-4 flex-grow">{divisi.description}</p>
-                      <button className="mt-4 px-6 py-2 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition-colors duration-300">Lihat Detail</button>
+                      <Link href={divisi.url} className="mt-4 px-6 py-2 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition-all hover:scale-105 duration-300">Lihat Detail</Link>
                     </div>
                   </div>
                 ))}
@@ -216,7 +222,7 @@ const DivisionCarousel = () => {
                         </div>
                         <h3 className="text-2xl font-bold text-yellow-300 mb-3">{divisi.name}</h3>
                         <p className="text-gray-200 text-base mb-4 flex-grow">{divisi.description}</p>
-                        <button className="mt-4 px-6 py-2 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition-colors duration-300">Lihat Detail</button>
+                        <Link href={divisi.url} className="mt-4 px-6 py-2 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition-all hover:scale-105 duration-300">Lihat Detail</Link>
                       </div>
                     </div>
                   );
