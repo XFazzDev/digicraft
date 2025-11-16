@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/app/components/Navbar";
 import Landing from "@/app/components/Landing";
-import DivisionCarousel from "@/app/components/DivisionCorousel";
+import DivisiPage from "../components/Devisi";
 import RootLayout from "../layout";
 
 export const metadata = {
@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <RootLayout>
       <Landing />
-      <DivisionCarousel />
+      <DivisiPage title="Marketing" />
     </RootLayout>
   );
 };

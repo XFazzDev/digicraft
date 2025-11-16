@@ -14,7 +14,7 @@ const Page = () => {
   return (
     <RootLayout>
       <Navbar />
-      <DivisiPage />
+      <DivisiPage title="Branding" />
     </RootLayout>
   );
 };
